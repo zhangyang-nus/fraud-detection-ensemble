@@ -2,13 +2,14 @@
 
 A card-not-present (CNP) fraud detection system built on the [IEEE-CIS Fraud Detection](https://www.kaggle.com/c/ieee-fraud-detection) dataset (410K+ transactions, 3.5% fraud rate). Combines four complementary pipelines through a stacked decision layer to help a card issuer flag high-risk transactions for step-up authentication or manual review — without over-flagging legitimate customers.
 
-**Result:** 36.45% fraud recall at a 1.04% false-positive rate (0.892 ROC-AUC), exceeding the project's 25%-recall target.
+**Original Team Workflow Results:** The original KNIME/H2O team workflow achieved the following held-out test results. The Python implementation in this repository is a post-submission reconstruction and has not yet been validated to reproduce these metrics exactly:
++ 36.45% fraud recall at a 1.04% false-positive rate (0.892 ROC-AUC), exceeding the project's 25%-recall target.
 
 ## Background
 
 This was originally a 4-person team project for an NUS data science module, built and submitted as a KNIME (visual/no-code) workflow. I scoped the overall system architecture, built the shared data cleaning and feature engineering pipeline, personally implemented the Isolation Forest pipeline, and designed the final stacking decision layer. Three teammates each implemented one of the other pipelines under that architecture.
 
-**`fraud_pipeline_202607.py`** in this repo is my own post-submission reimplementation of the full workflow in Python/scikit-learn/XGBoost, for further understanding the mechanics underneath the visual KNIME nodes. It mirrors the original pipeline design and is commented to explain the reasoning behind each step, not just the code.
+**`fraud_pipeline.py`** in this repo is my own post-submission reimplementation of the full workflow in Python/scikit-learn/XGBoost, for further understanding the mechanics underneath the visual KNIME nodes. It mirrors the original pipeline design and is commented to explain the reasoning behind each step, not just the code.
 
 ## System Design
 
