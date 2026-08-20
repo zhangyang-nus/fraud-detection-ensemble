@@ -21,7 +21,7 @@ Structure (mirrors the KNIME workflow):
     8. Ablation study: marginal contribution of each pipeline
 
 Run:  python fraud_pipeline_v3.py --data path/to/ieee_cis_joined_full.csv
-      python fraud_pipeline_v3.py --data data.csv --max-fpr 0.02
+      python fraud_pipeline_v3.py --data data.csv --max-fpr 0.01
 
 CHANGES IN THIS VERSION (v3)
 ----------------------------
